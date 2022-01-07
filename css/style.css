@@ -2,7 +2,6 @@
 
 * {
     box-sizing: border-box;
-    margin: 0;
 }
 body {
     background-color: black;
@@ -11,7 +10,7 @@ body {
     font-family: 'Courier New', Courier, monospace, sans-serif;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
+    padding: 100px;
     justify-content: center;
     min-height: 100hv;
 }
@@ -20,7 +19,7 @@ p {
     margin: 5px;
 }
 
-h2 {
+h2{
     margin: 10px 0 20px;
     text-align: center;
 }
@@ -30,5 +29,68 @@ input[type="checkbox"] {
 }
 
 .container {
-    background: linear-gradient(to bottom right, #834f16, #d6b99b 59%, #c09b76 94%);
+    background: linear-gradient(to bottom left, #33ccff 6%, #ff99cc 100%);
+    box-shadow: 0px 2px 10px rgba (255, 255, 255, .2 );
+    padding: 20px;
+    width: 400px;
+    max-width: 100%;
+}
+
+.result-container {
+    background-color: #33ccff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    font-size: 18px;
+    padding: 12px 10px;
+    height: 50px;
+    width: 100%;
+}
+
+.result-container #result {
+    word-wrap: break-word;
+    max-width: calc(100% - 40px);
+}
+
+.result-container .btn {
+    font-size: 11px;
+    font-family: 'Courier New', Courier, monospace sans-serif; 
+    font-weight: bold;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: 40px;
+    width: 40px;
+    color: white;
+}
+
+.btn {
+    border: none;
+    color: whitesmoke;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 8px 12px;
+    background-color: #ff99cc;
+}
+
+
+.btn-large {
+    display: block;
+    width: 100%;
+}
+
+.setting {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 400px) {
+    .result-container {
+        font-size: 14px;
+
+    }
 }
