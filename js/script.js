@@ -15,7 +15,7 @@ var randomFunc = {
     upper: getRandomUpper,
     lower : getRandomLower,
 };
-
+// generate event listen
 generateEl.addEventListener("click", () => {
     const length = +lengthEl.value;
     const hasUpper = uppercaseEl.checked;
@@ -23,10 +23,32 @@ generateEl.addEventListener("click", () => {
     const hasNumber = numbersEl.checked;
     const hasLower = lowercaseEl.checked;
     
-    
-    
-    console.log(hasLower, hasUpper, hasNumber, hasSymbol);
+    resultEl.innerText = generatePassword(
+        hasLower,
+        hasUpper, 
+        hasNumber, 
+        hasSymbol
+    );
 });
+
+// generate password function
+function generatePassword(lower, upper, number, symbol, length) {
+    //1. init PW var
+    // 2. Filter out unchcecked types
+    // 3. loop over length call generator function for each type
+    // 4. add final PW to the PW car return.
+
+    let generatedPassword = "";
+
+    var typesCount = lower + upper + number + symbol;
+
+    console.log ("typesCount", typesCount);
+
+    var typesArr = [{lower}, {upper}, {number}, {symbol}].filter(item => Object.values(item) [0]
+    );
+
+    console.log ("typesArr:", typesArr);
+}
 
 // random generator fuctions (Number, UpperCase, LowerCase, Symbols)
 
