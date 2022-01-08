@@ -1,8 +1,8 @@
 
 // DOM elements
 var resultEl = document.getElementById("result");
-var upperCaseEl = document.getElementById("upperCase");
-var lowerCaseEl = document.getElementById("lowerCase");
+var uppercaseEl = document.getElementById("uppercase");
+var lowercaseEl = document.getElementById("lowercase");
 var numbersEl = document.getElementById("numbers");
 var symbolsEl = document.getElementById("symbols");
 var generateEl = document.getElementById("generate");
@@ -10,12 +10,23 @@ var lengthEl = document.getElementById("length");
 var clipboardEl = document.getElementById("clipboard");
 
 var randomFunc = {
-    symbols : getRandomSymbol,
+    symbol : getRandomSymbol,
     number : getRandomNumber,
     upper: getRandomUpper,
     lower : getRandomLower,
 };
 
+generateEl.addEventListener("click", () => {
+    const length = +lengthEl.value;
+    const hasUpper = uppercaseEl.checked;
+    const hasSymbol = symbolsEl.checked;
+    const hasNumber = numbersEl.checked;
+    const hasLower = lowercaseEl.checked;
+    
+    
+    
+    console.log(hasLower, hasUpper, hasNumber, hasSymbol);
+});
 
 // random generator fuctions (Number, UpperCase, LowerCase, Symbols)
 
