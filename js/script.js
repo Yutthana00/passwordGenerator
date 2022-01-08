@@ -51,10 +51,6 @@ clipboardEl.addEventListener ("click", () => {
 
 // generate password function
 function generatePassword(lower, upper, number, symbol, length) {
-    //1. init PW var
-    // 2. Filter out unchcecked types
-    // 3. loop over length call generator function for each type
-    // 4. add final PW to the PW car return.
 
     let generatedPassword = "";
 
@@ -102,8 +98,3 @@ function getRandomSymbol() {
     var symbols = "!@£$%^&*(){}#/.,'";
     return symbols [Math.floor(Math.random() * symbols.length )];
 }
-
-
-
-// console.log(Math.floor(Math.random() * 26) + 97);
-// console.log(getRandomSymbol());
